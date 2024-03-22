@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class CubePoolManager : MonoBehaviour
@@ -30,8 +31,9 @@ public class CubePoolManager : MonoBehaviour
         }
         return null;
     }
-    public void ReturnCubeToPool(GameObject cube)
+    public IEnumerator ReturnCubeToPool(GameObject cube)
     {
+        yield return new WaitForSeconds(5f); 
         cube.SetActive(false);
     }
 }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CubeController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
     [SerializeField] private Transform cubeSpawnPoint;
 
+    private float speed = 15f;
     private int cubeCount = 0;
     private CubePoolManager poolManager;
     void LateUpdate()
