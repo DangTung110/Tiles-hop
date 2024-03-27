@@ -1,11 +1,11 @@
 using UnityEngine;
-
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     [Header ("Backgrounds")]
-    [SerializeField] private GameObject[] backgrounds;
-
-    [SerializeField] private Material roadMat;
+    [SerializeField] private GameObject[]   backgrounds;
+    [Header("Materials")]
+    [SerializeField] private Material       roadMat;
 
     private void Start()
     {

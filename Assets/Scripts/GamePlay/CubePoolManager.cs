@@ -5,8 +5,8 @@ using UnityEngine;
 public class CubePoolManager : MonoBehaviour
 {
     [SerializeField] private GameObject cubePrefab;
-    [SerializeField] private int poolSize;
-    [SerializeField] private List<GameObject> cubePool;
+    [SerializeField] private int        poolSize;
+    private List<GameObject> cubePool;
 
     private void Start()
     {
@@ -33,7 +33,7 @@ public class CubePoolManager : MonoBehaviour
     }
     public IEnumerator ReturnCubeToPool(GameObject cube)
     {
-        yield return new WaitForSeconds(5f); 
+        yield return new WaitForSeconds(7f); 
         cube.SetActive(false);
     }
 }

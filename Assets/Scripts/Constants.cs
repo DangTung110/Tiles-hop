@@ -10,3 +10,7 @@ public class Game
 {
     public static int LEVEL_GAME;
 }
+public class Tag
+{
+    public static string CUBE_TAG = "Cube";
+}

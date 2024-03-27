@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class CubeController : MonoBehaviour
 {
-    [SerializeField] private Transform cubeSpawnPoint;
-
-    private float speed = 15f;
-    private int cubeCount = 0;
-    private CubePoolManager poolManager;
+    private float speed = 10f;
     void LateUpdate()
     {
         CubeMovement();
@@ -16,6 +12,6 @@ public class CubeController : MonoBehaviour
 
     private void CubeMovement()
     {
-        gameObject.GetComponent<Rigidbody>().velocity = transform.forward * speed;
+        transform.position -= Vector3.forward * speed * Time.deltaTime;
     }
 }

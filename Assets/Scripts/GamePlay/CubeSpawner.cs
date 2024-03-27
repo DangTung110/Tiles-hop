@@ -5,7 +5,7 @@ using UnityEngine;
 public class CubeSpawner : MonoBehaviour
 {
     [SerializeField] private CubePoolManager poolManager;
-    private float timeSpawn = 0.5f;
+    private float timeSpawn = 0.98f;
 
     private void Update()
     {
@@ -19,12 +19,11 @@ public class CubeSpawner : MonoBehaviour
             GameObject cube = poolManager.GetCube();
             if (cube != null)
             {
-                cube.transform.position = new Vector3(transform.position.x + Random.Range(-1.2f, 1.2f), transform.position.y, transform.position.z);
+                cube.transform.position = transform.position + Vector3.right * Random.Range(-1.2f, 1.2f);
                 cube.SetActive(true);
                 poolManager.StartCoroutine(poolManager.ReturnCubeToPool(cube));
             }
-            timeSpawn = Random.Range(0.3f, 0.8f);
+            timeSpawn = 0.98f;
         }
-        
     }
 }
