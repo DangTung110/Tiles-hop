@@ -7,9 +7,9 @@ public class CubeController : MonoBehaviour
     private float speed = 10f;
     void LateUpdate()
     {
-        CubeMovement();
+        if (Game.IS_START)
+            CubeMovement();
     }
-
     private void CubeMovement()
     {
         transform.position -= Vector3.forward * speed * Time.deltaTime;

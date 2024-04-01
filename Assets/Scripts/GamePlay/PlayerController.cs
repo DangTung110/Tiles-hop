@@ -10,24 +10,17 @@ public class PlayerController : MonoBehaviour
     private Rigidbody   rb;
     private Camera      camera;
     private float       distance = 0f;
-
     void Awake()
     {
         playerRenderer = GetComponent<Renderer>();
         rb = GetComponent<Rigidbody>();
         camera = Camera.main;
     }
-
     private void Start()
     {
         if (instance == null)
             instance = this;
         playerRenderer.material = playerMaterials[Random.Range(0, 14)];
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
     }
     private void LateUpdate()
     {
@@ -52,6 +45,15 @@ public class PlayerController : MonoBehaviour
             mousePos.y = rb.position.y;
             mousePos.z = rb.position.z;
             rb.position = mousePos;
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == Tag.ROAD_TAG)
+        {
+            StartCoroutine(GameManager.instance.EndGame());
+            ScoreManager.instance.SetHighScore();
+            ScoreManager.instance.SaveHighScore();
         }
     }
 }

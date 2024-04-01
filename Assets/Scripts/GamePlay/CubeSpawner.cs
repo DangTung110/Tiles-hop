@@ -9,7 +9,8 @@ public class CubeSpawner : MonoBehaviour
 
     private void Update()
     {
-        CubeSpawn();
+        if (Game.IS_START)
+            CubeSpawn();
     }
     private void CubeSpawn()
     {
@@ -19,7 +20,7 @@ public class CubeSpawner : MonoBehaviour
             GameObject cube = poolManager.GetCube();
             if (cube != null)
             {
-                cube.transform.position = transform.position + Vector3.right * Random.Range(-1.2f, 1.2f);
+                cube.transform.position = transform.position + Vector3.right * Random.Range(-2.3f, 2.3f);
                 cube.SetActive(true);
                 poolManager.StartCoroutine(poolManager.ReturnCubeToPool(cube));
             }
