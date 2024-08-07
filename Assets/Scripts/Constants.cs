@@ -2,7 +2,7 @@ using UnityEngine.Rendering;
 
 public class Options
 {
-    public const string VOLUME = "volume";
+    public const string VOLUME_TEXT = "volume";
 }
 public class Scene
 {

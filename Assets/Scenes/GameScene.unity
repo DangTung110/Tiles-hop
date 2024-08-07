@@ -343,6 +343,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840631638}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &694384123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,7 +550,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 3311857205376679525}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20c07aa0a1b7f704991a6edb33f65cc6, type: 3}
   m_Name: 
@@ -1110,7 +1122,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1222,11 +1234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6250778480462752279, guid: cf773b98d36bffa439525433373b0364, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6250778480462752279, guid: cf773b98d36bffa439525433373b0364, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6250778480462752279, guid: cf773b98d36bffa439525433373b0364, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1238,7 +1250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6250778480462752279, guid: cf773b98d36bffa439525433373b0364, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6250778480462752279, guid: cf773b98d36bffa439525433373b0364, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1289,6 +1301,10 @@ PrefabInstance:
       propertyPath: fadeAnim
       value: 
       objectReference: {fileID: 1532356904}
+    - target: {fileID: 712426929759821116, guid: 70846d7ae5010e04a9385cfd5f1bb0ac, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 712426929759821116, guid: 70846d7ae5010e04a9385cfd5f1bb0ac, type: 3}
       propertyPath: playerAnim
       value: 

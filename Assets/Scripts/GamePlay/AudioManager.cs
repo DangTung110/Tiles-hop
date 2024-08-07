@@ -13,6 +13,9 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         audio.clip = clips[Game.MAP];
+    }
+    public void PlayAudio()
+    {
         audio.Play();
     }
 }
